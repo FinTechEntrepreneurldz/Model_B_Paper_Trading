@@ -1,0 +1,115 @@
+symbol,side,notional,order_id,status,timestamp_utc
+APA,buy,26086.96,88f88595-888b-4056-895c-0cce207125f2,OrderStatus.ACCEPTED,2026-04-30_234142
+HAL,buy,26086.96,db10685d-200e-4f50-a3d8-1f22468abc59,OrderStatus.ACCEPTED,2026-04-30_234142
+EL,buy,26086.96,8657b1db-a649-4d30-9e44-e9338bc48574,OrderStatus.ACCEPTED,2026-04-30_234142
+VLO,buy,26086.96,e3b7a938-c2f5-4d97-97f2-962c3034b345,OrderStatus.ACCEPTED,2026-04-30_234142
+KO,buy,26086.96,d5a997ab-0fe0-4145-8a66-4d14a1eb9912,OrderStatus.ACCEPTED,2026-04-30_234142
+MNST,buy,26086.96,49f8fe81-b17e-400d-a714-a01d625142ee,OrderStatus.ACCEPTED,2026-04-30_234142
+TGT,buy,26086.96,8f5b5307-f6ee-46b0-a5ec-0702939cde09,OrderStatus.ACCEPTED,2026-04-30_234142
+FTV,buy,24223.6,6306145a-d30c-4784-92bb-33f7492e77c4,OrderStatus.ACCEPTED,2026-04-30_234142
+TT,buy,24223.6,381460da-7b18-4ee1-8093-83835e089c9c,OrderStatus.ACCEPTED,2026-04-30_234142
+PH,buy,24223.6,b9e90215-62a6-41a6-bd3d-8bb0c655e40d,OrderStatus.ACCEPTED,2026-04-30_234142
+ODFL,buy,24223.6,13359c4b-cefb-484c-80f4-5f3c8332148f,OrderStatus.ACCEPTED,2026-04-30_234142
+NOC,buy,24223.6,696b0d1f-d866-4c52-8447-5219071dc0c4,OrderStatus.ACCEPTED,2026-04-30_234142
+UAL,buy,24223.6,f252882f-dc6c-43bc-9e6d-58c5046b02d8,OrderStatus.ACCEPTED,2026-04-30_234142
+RTX,buy,24223.6,51fcfd6b-adad-4c5e-acca-699e3802484d,OrderStatus.ACCEPTED,2026-04-30_234142
+DHR,buy,22282.61,b4d8a936-5e5e-4d06-ba54-2e257a308e1c,OrderStatus.ACCEPTED,2026-04-30_234142
+ALGN,buy,22282.61,d35fecad-0b75-4c0d-b940-60d9cde8a629,OrderStatus.ACCEPTED,2026-04-30_234142
+BSX,buy,22282.61,aa0aee4f-18ae-438b-9ad3-9d65e353c0d6,OrderStatus.ACCEPTED,2026-04-30_234142
+EW,buy,22282.61,15f99092-cbc7-4b49-b1ff-daf42e007e59,OrderStatus.ACCEPTED,2026-04-30_234142
+REGN,buy,22282.61,18f746e5-6cf2-4283-bb3e-96918f863c38,OrderStatus.ACCEPTED,2026-04-30_234142
+TMO,buy,22282.61,50e53671-cd43-417e-8938-d4216a705d8c,OrderStatus.ACCEPTED,2026-04-30_234142
+INCY,buy,22282.61,9ad9cedc-a171-4068-8fb7-9f8b85eaf05f,OrderStatus.ACCEPTED,2026-04-30_234142
+IQV,buy,22282.61,b1a84434-ed25-4608-808d-2ec61f6b31a7,OrderStatus.ACCEPTED,2026-04-30_234142
+INTC,buy,22222.22,a7c2a885-6191-4568-b38f-65b2e139ad6b,OrderStatus.ACCEPTED,2026-04-30_234142
+MSCI,buy,22222.22,11c7f530-8fba-4194-9b32-2f3052411a61,OrderStatus.ACCEPTED,2026-04-30_234142
+ON,buy,22222.22,1715a8d7-612a-4659-9599-dcb8aa0219e8,OrderStatus.ACCEPTED,2026-04-30_234142
+ORCL,buy,22222.22,9ea8b724-6ac9-4a2a-b560-7d4de993608a,OrderStatus.ACCEPTED,2026-04-30_234142
+WDC,buy,22222.22,f8c1bc9e-1c67-4263-816b-dd0b049177f4,OrderStatus.ACCEPTED,2026-04-30_234142
+WTW,buy,22222.22,e9225852-158a-4235-bdad-9e930fd3cfd1,OrderStatus.ACCEPTED,2026-04-30_234142
+XYZ,buy,22222.22,21cc48f4-251c-4ed2-9140-94f1bc05c070,OrderStatus.ACCEPTED,2026-04-30_234142
+TXN,buy,22222.22,c6279c42-3111-4141-8455-953f82a4e83e,OrderStatus.ACCEPTED,2026-04-30_234142
+STX,buy,22222.22,8a1aa356-8fe9-4db2-8cfc-a770b760d2ac,OrderStatus.ACCEPTED,2026-04-30_234142
+SYF,buy,22222.22,79950fe5-7762-48d5-940b-3329f36653bf,OrderStatus.ACCEPTED,2026-04-30_234142
+IBM,buy,22222.22,b2a39a4b-0fad-41a3-87df-c84be1f85452,OrderStatus.ACCEPTED,2026-04-30_234142
+PYPL,buy,22222.22,eff0991e-80fc-4515-a88a-dc9ba75abfc0,OrderStatus.ACCEPTED,2026-04-30_234142
+CPAY,buy,22222.22,2013b356-ebab-43b7-84fb-ff91163146f1,OrderStatus.ACCEPTED,2026-04-30_234142
+COF,buy,22222.22,40176409-992a-4b89-af64-7ed615aa340d,OrderStatus.ACCEPTED,2026-04-30_234142
+BX,buy,22222.22,e8977a7d-c779-4895-b513-54549db5db8e,OrderStatus.ACCEPTED,2026-04-30_234142
+HPQ,buy,22222.22,73c5d20c-5b97-479e-9f53-60cc4503d351,OrderStatus.ACCEPTED,2026-04-30_234142
+BLK,buy,22222.22,ee764230-bf28-4eed-9f71-ad5896a827f7,OrderStatus.ACCEPTED,2026-04-30_234142
+AMD,buy,22222.22,77e0ba51-4b15-4376-9505-10237483be08,OrderStatus.ACCEPTED,2026-04-30_234142
+PSA,buy,21739.13,2398fd1d-49e9-422b-b53b-003673e5d762,OrderStatus.ACCEPTED,2026-04-30_234142
+PPG,buy,21739.13,ff4706f6-f8c5-47ff-b669-fddca416ff17,OrderStatus.ACCEPTED,2026-04-30_234142
+CF,buy,21739.13,2da9b44b-cc31-452b-a936-205ab2030154,OrderStatus.ACCEPTED,2026-04-30_234142
+CHTR,buy,21739.13,b6cbc4ec-6ba0-4371-812c-4a54ad8ddd42,OrderStatus.ACCEPTED,2026-04-30_234142
+GM,buy,21739.13,6ffd6ef3-97b3-448a-aa1a-0c0e749a51f0,OrderStatus.ACCEPTED,2026-04-30_234142
+EQIX,buy,21739.13,5bfdc8af-61c4-46e6-86cd-c6c4bf5fb2dc,OrderStatus.ACCEPTED,2026-04-30_234142
+CCL,buy,21739.13,cd22d613-1630-49e3-b74c-f27fdf1518cd,OrderStatus.ACCEPTED,2026-04-30_234142
+EBAY,buy,21739.13,a762b83c-2407-45bd-829b-084608f61929,OrderStatus.ACCEPTED,2026-04-30_234142
+EXPE,buy,21739.13,ea1dc1d3-1858-493b-b8a3-8b879ce2a5dc,OrderStatus.ACCEPTED,2026-04-30_234142
+BKNG,buy,21739.13,2366f159-5c07-463c-830d-6f7b782a75ed,OrderStatus.ACCEPTED,2026-04-30_234142
+SRE,buy,21739.13,e48dc1b2-885a-4ece-9a57-08ca2d2f3114,OrderStatus.ACCEPTED,2026-04-30_234142
+WYNN,buy,21739.13,597740ff-4219-4826-be88-6c63f2d8626e,OrderStatus.ACCEPTED,2026-04-30_234142
+PSKY,buy,21739.13,3f8db521-7a16-46cb-9f12-0458b346222e,OrderStatus.ACCEPTED,2026-04-30_234142
+TTWO,buy,21739.13,cc0fc41b-c5eb-477c-83db-2a65b4dc37c3,OrderStatus.ACCEPTED,2026-04-30_234142
+LVS,buy,21739.13,db299c41-eb99-40cd-b044-ae943ad3c034,OrderStatus.ACCEPTED,2026-04-30_234142
+PCG,buy,21739.13,bd87de4c-3ccd-432f-8b53-b30dbed4c68c,OrderStatus.ACCEPTED,2026-04-30_234142
+LYB,buy,21739.13,7cf76e70-77cb-4e72-ae47-1e19fcdbef3f,OrderStatus.ACCEPTED,2026-04-30_234142
+KMB,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+WMB,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+BKR,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CLX,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CL,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+PG,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+KMI,sell,6020.07,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+VRSK,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+UPS,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+GD,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+PAYX,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+EFX,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CMI,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ADP,sell,5590.06,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ABT,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ELV,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ABBV,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CVS,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CNC,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+JNJ,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+HUM,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ZTS,sell,5142.14,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CSCO,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+FIS,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CB,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+PNC,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+TFC,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+SNPS,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+SWKS,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+RF,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+MU,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+NOW,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+PGR,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ADBE,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+AVGO,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+BK,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+AMP,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+MS,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+LRCX,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+MSI,sell,5128.21,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+AMZN,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+HD,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+GOOG,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+D,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+DD,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+CMG,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+AMT,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+AEP,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+APTV,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+ORLY,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+NKE,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+MCD,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+MOS,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+LIN,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+SPG,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+TTD,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
+WBD,sell,5016.72,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30_234142
