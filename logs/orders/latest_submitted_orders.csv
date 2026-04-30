@@ -1,0 +1,108 @@
+symbol,side,notional,order_id,status,timestamp_utc
+APA,buy,26000.0,3e66f92f-41ca-4c15-a03e-2543c5f414be,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+EL,buy,26000.0,52a374f2-63dc-4800-8dc2-4437cd64b2dc,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+HAL,buy,26000.0,96d61045-97fd-42b6-9ab5-322179d4bfdd,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+TGT,buy,26000.0,5f968a63-e86d-4b99-b324-88d624a7e7ac,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+MNST,buy,26000.0,772de9d3-4740-4ce9-87c4-c48b92241af1,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+KO,buy,26000.0,c6cd5109-f34e-4912-b8d3-30704f9f7dd9,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+VLO,buy,26000.0,db007c2c-cc22-463b-8f93-2ca438583f12,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+ODFL,buy,24142.86,de053edf-a07c-4ce1-9f14-554187adeed8,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+PH,buy,24142.86,1d1bb098-bb80-4ac0-a64e-5607773854f4,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+TDG,buy,24142.86,bd49c81e-6081-4cb4-89ad-7fe59280002f,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+FTV,buy,24142.86,c43f5d38-d4b5-400c-a435-404615c2928c,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+TT,buy,24142.86,28165f35-9131-471c-ad7f-7a5cf6351bc2,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+UAL,buy,24142.86,67699726-9b54-4c95-b782-262374fcc507,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+RTX,buy,24142.86,d9442a37-5188-438d-960f-3c52b53601a8,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+XYZ,buy,22629.63,dad064ea-36d3-400e-8c4f-da99c88b807d,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+SYF,buy,22629.63,27b98f25-c8c9-46e2-aad9-90c97527b2aa,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+WTW,buy,22629.63,d91f3c87-24c9-4d5e-a9f6-ad1df263b0c8,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+MSCI,buy,22629.63,8242d268-de0b-4de4-bec8-61ef0bd93b08,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+PYPL,buy,22629.63,de13d830-de6c-49f3-8259-e3fca0e69d83,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+BX,buy,22629.63,c358dc21-f4a8-444b-8165-d6761c252680,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+BLK,buy,22629.63,5e90a70a-c264-4d85-b438-a24f0afd355a,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+COF,buy,22629.63,7102578e-98f3-49b6-93f2-303180b1b880,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+CPAY,buy,22629.63,c63722ee-1c8f-4042-9f74-34d0f52c8ac2,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+INCY,buy,22208.33,3cdcdfdf-08c4-4dd1-80de-4cb6ba8cc58f,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+IQV,buy,22208.33,d1382c46-0966-404a-804c-4138e9ba1451,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+TMO,buy,22208.33,fba78b40-5047-4a58-811b-fbdc63fbbc24,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+REGN,buy,22208.33,c8dd464a-ed30-4e06-8deb-a7adc10d4093,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+EW,buy,22208.33,765d5b3f-a2f7-4a02-afb5-0b4e3753f54f,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+BSX,buy,22208.33,5e0003b4-b57c-4d3f-b982-a4d4598ff36a,OrderStatus.ACCEPTED,2026-04-30T23:59:23.882648+00:00
+ALGN,buy,22208.33,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22208.33"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+DHR,buy,22208.33,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22208.33"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+AMD,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+TXN,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+STX,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+IBM,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+WDC,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+ORCL,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+INTC,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+HPQ,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+ON,buy,22148.15,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""22148.15"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+EBAY,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+EXPE,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+EQIX,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+TTWO,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+WYNN,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+PSKY,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+SRE,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+PSA,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+PCG,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+LVS,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+GM,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+BKNG,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+CCL,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+CF,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+CHTR,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+PPG,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+LYB,buy,21666.67,,"ERROR: {""buying_power"":""12083.36"",""code"":40310000,""cost_basis"":""21666.67"",""message"":""insufficient buying power""}",2026-04-30T23:59:23.882648+00:00
+KMI,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+WMB,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+PG,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CLX,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CL,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+KMB,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+BKR,sell,6000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CMI,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+GD,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+EFX,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+ADP,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+PAYX,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+VRSK,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+UPS,sell,5571.43,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+BK,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+AMP,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CB,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+FIS,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+TFC,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+PNC,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+MS,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+PGR,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+RF,sell,5222.22,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+HUM,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+ZTS,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+JNJ,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CVS,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CNC,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+ABBV,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+ABT,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+ELV,sell,5125.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+ADBE,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+CSCO,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+AVGO,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+SWKS,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+SNPS,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+MCHP,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+MU,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+NOW,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+LRCX,sell,5111.11,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+AEP,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+AMT,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+DD,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+D,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+GOOG,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+LIN,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+MOS,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+SPG,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+TTD,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00
+WBD,sell,5000.0,,"ERROR: {""code"":42210000,""message"":""fractional orders cannot be sold short""}",2026-04-30T23:59:23.882648+00:00

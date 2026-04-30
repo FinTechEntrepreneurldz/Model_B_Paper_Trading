@@ -1,0 +1,21 @@
+{
+  "computed_at": "2026-04-30T23:59:23.882648+00:00",
+  "lookback_days": 63,
+  "overall_status": "ok",
+  "alerts": [],
+  "metrics": {},
+  "action_counts": {
+    "rebalance": 1
+  },
+  "action_entropy": null,
+  "portfolio_sharpe_30d": null,
+  "spy_sharpe_30d": null,
+  "portfolio_return_30d": null,
+  "spy_return_30d": null,
+  "n_decisions": 1,
+  "n_unique_actions": 1,
+  "top_action": "rebalance",
+  "top_action_pct": 100.0,
+  "days_since_last_run": 0,
+  "training_recommended": false
+}
