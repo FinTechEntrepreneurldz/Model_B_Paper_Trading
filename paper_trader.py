@@ -579,77 +579,138 @@ def submit_orders(order_plan: pd.DataFrame, client) -> pd.DataFrame:
 # 6. Logging
 # ════════════════════════════════════════════════════════════════════════
 
+def _append_csv(path: Path, row_df: pd.DataFrame):
+    """Append rows to a CSV (read-merge-write). Creates the file if missing."""
+    if path.exists() and path.stat().st_size > 0:
+        try:
+            old = pd.read_csv(path)
+            out = pd.concat([old, row_df], ignore_index=True)
+        except Exception:
+            out = row_df
+    else:
+        out = row_df
+    out.to_csv(path, index=False)
+
+
 def log_outputs(decision: dict, target_weights: pd.Series, positions: pd.DataFrame,
                 order_plan: pd.DataFrame, submitted: pd.DataFrame, account_info: dict):
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H%M%S")
+    """Write logs in the canonical schema the central Streamlit dashboard expects.
+
+    Mirrors the file/column layout used by Base_Model_BR_PPO/logs/<model>/, so the
+    dashboard can read both models with one code path.
+    """
+    ts_iso   = datetime.now(timezone.utc).isoformat()                       # "2026-04-30T23:24:32.388+00:00"
+    ts_file  = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H%M%S")       # filename-safe
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    # Decisions
-    dec_df = pd.DataFrame([{**decision, "timestamp_utc": ts}])
-    dec_df.to_csv(LOG_DIR / "decisions" / f"{ts}_decision.csv", index=False)
+    # ── decisions/ ───────────────────────────────────────────────────────
+    # Schema (matches model_a):
+    #   market_date, variant, action, action_idx, last_action, submit_orders,
+    #   account_status, account_value, n_target_positions, n_orders_planned,
+    #   n_orders_submitted, model_path, metadata_path, timestamp_utc
+    dec_row = {
+        "market_date":         date_str,
+        "variant":             "MLP_alpha__130_30",
+        "action":              decision.get("action", "rebalance"),         # "rebalance" or "hold"
+        "action_idx":          0,                                             # not a discrete action space
+        "last_action":         "",
+        "submit_orders":       bool(decision.get("submit_orders", False)),
+        "account_status":      account_info.get("status", "unknown"),
+        "account_value":       float(account_info.get("equity", 0.0)),
+        "n_target_positions":  int(decision.get("n_target_positions", 0)),
+        "n_orders_planned":    int(decision.get("n_planned_orders", 0)),
+        "n_orders_submitted":  int(decision.get("n_submitted_orders", 0)),
+        "model_path":          "artifacts/mlp.joblib",
+        "metadata_path":       "",
+        "timestamp_utc":       ts_iso,
+    }
+    dec_df = pd.DataFrame([dec_row])
     dec_df.to_csv(LOG_DIR / "decisions" / "latest_decision.csv", index=False)
+    _append_csv(LOG_DIR / "decisions" / "decisions.csv", dec_df)
 
-    # Target weights
-    tw_df = target_weights.reset_index().rename(columns={"index": "symbol", 0: "weight"})
+    # ── target_weights/ ──────────────────────────────────────────────────
+    tw_df = target_weights.reset_index()
     tw_df.columns = ["symbol", "weight"]
     tw_df = tw_df[tw_df["weight"].abs() > 1e-6].sort_values("weight", ascending=False).reset_index(drop=True)
-    tw_df["timestamp_utc"] = ts
-    tw_df.to_csv(LOG_DIR / "target_weights" / f"{ts}_target_weights.csv", index=False)
+    tw_df["timestamp_utc"] = ts_iso
     tw_df.to_csv(LOG_DIR / "target_weights" / "latest_target_weights.csv", index=False)
+    _append_csv(LOG_DIR / "target_weights" / "target_weights.csv", tw_df)
 
-    # Orders
-    if not order_plan.empty:
-        order_plan["timestamp_utc"] = ts
-        order_plan.to_csv(LOG_DIR / "orders" / f"{ts}_order_plan.csv", index=False)
-    if not submitted.empty:
-        submitted["timestamp_utc"] = ts
-        submitted.to_csv(LOG_DIR / "orders" / f"{ts}_submitted.csv", index=False)
-    # latest_orders combines plan + submitted statuses
-    if not order_plan.empty:
-        order_plan.to_csv(LOG_DIR / "orders" / "latest_orders.csv", index=False)
-
-    # Positions snapshot
-    if not positions.empty:
-        positions["timestamp_utc"] = ts
-        positions.to_csv(LOG_DIR / "positions" / f"{ts}_positions.csv", index=False)
-        positions.to_csv(LOG_DIR / "positions" / "latest_positions.csv", index=False)
-
-    # Portfolio equity history (one row per run)
-    portfolio_path = LOG_DIR / "portfolio" / "equity_history.csv"
-    row = {
-        "date":           date_str,
-        "timestamp_utc":  ts,
-        "equity":         account_info.get("equity", 0.0),
-        "cash":           account_info.get("cash", 0.0),
-        "long_value":     account_info.get("long_value", 0.0),
-        "short_value":    account_info.get("short_value", 0.0),
-    }
-    if portfolio_path.exists():
-        ph = pd.read_csv(portfolio_path)
-        ph = pd.concat([ph, pd.DataFrame([row])], ignore_index=True)
+    # ── orders/ ──────────────────────────────────────────────────────────
+    # Two latest snapshots + one cumulative history
+    if order_plan is not None and not order_plan.empty:
+        op = order_plan.copy()
+        op["timestamp_utc"] = ts_iso
+        op.to_csv(LOG_DIR / "orders" / "latest_planned_orders.csv", index=False)
     else:
-        ph = pd.DataFrame([row])
-    ph.to_csv(portfolio_path, index=False)
+        # Write empty file so the dashboard knows the run had no planned orders
+        pd.DataFrame(columns=["symbol", "side", "qty", "notional", "timestamp_utc"]).to_csv(
+            LOG_DIR / "orders" / "latest_planned_orders.csv", index=False)
 
-    # Health
-    health_row = {
-        "timestamp_utc":      ts,
+    if submitted is not None and not submitted.empty:
+        sub = submitted.copy()
+        sub["timestamp_utc"] = ts_iso
+        sub.to_csv(LOG_DIR / "orders" / "latest_submitted_orders.csv", index=False)
+        _append_csv(LOG_DIR / "orders" / "submitted_orders.csv", sub)
+    else:
+        pd.DataFrame(columns=["symbol", "side", "notional", "order_id", "status", "timestamp_utc"]).to_csv(
+            LOG_DIR / "orders" / "latest_submitted_orders.csv", index=False)
+
+    # ── positions/ ───────────────────────────────────────────────────────
+    if positions is not None and not positions.empty:
+        pos = positions.copy()
+        pos["timestamp_utc"] = ts_iso
+        pos.to_csv(LOG_DIR / "positions" / "latest_positions.csv", index=False)
+    else:
+        pd.DataFrame(columns=["symbol", "qty", "market_value", "side", "timestamp_utc"]).to_csv(
+            LOG_DIR / "positions" / "latest_positions.csv", index=False)
+
+    # ── portfolio/portfolio.csv ──────────────────────────────────────────
+    # Schema: timestamp_utc, portfolio_value, action, submit_orders
+    portfolio_row = pd.DataFrame([{
+        "timestamp_utc":   ts_iso,
+        "portfolio_value": float(account_info.get("equity", 0.0)),
+        "action":          decision.get("action", "rebalance"),
+        "submit_orders":   bool(decision.get("submit_orders", False)),
+    }])
+    _append_csv(LOG_DIR / "portfolio" / "portfolio.csv", portfolio_row)
+
+    # ── health/ ──────────────────────────────────────────────────────────
+    # health_status.json — lightweight summary the dashboard reads
+    health_status = {
+        "computed_at":           ts_iso,
+        "lookback_days":         63,
+        "overall_status":        decision.get("status", "ok"),
+        "alerts":                [] if decision.get("status") == "ok" else [decision.get("status", "")],
+        "metrics":               {},
+        "action_counts":         {decision.get("action", "rebalance"): 1},
+        "action_entropy":        None,
+        "portfolio_sharpe_30d":  None,
+        "spy_sharpe_30d":        None,
+        "portfolio_return_30d":  None,
+        "spy_return_30d":        None,
+        "n_decisions":           1,
+        "n_unique_actions":      1,
+        "top_action":            decision.get("action", "rebalance"),
+        "top_action_pct":        100.0,
+        "days_since_last_run":   0,
+        "training_recommended":  False,
+    }
+    with open(LOG_DIR / "health" / "health_status.json", "w") as f:
+        json.dump(health_status, f, indent=2)
+
+    # signal_history.csv — append per-run health row (matches signal_history shape)
+    sig_row = pd.DataFrame([{
+        "timestamp_utc":      ts_iso,
         "date":               date_str,
         "status":             decision.get("status", "ok"),
-        "n_target_positions": int(len(tw_df)),
-        "n_planned_orders":   int(len(order_plan)),
-        "n_submitted_orders": int(len(submitted)),
-        "account_value":      account_info.get("equity", 0.0),
-        "submit_orders":      decision.get("submit_orders", False),
-    }
-    health_path = LOG_DIR / "health" / "health_history.csv"
-    if health_path.exists():
-        hh = pd.read_csv(health_path)
-        hh = pd.concat([hh, pd.DataFrame([health_row])], ignore_index=True)
-    else:
-        hh = pd.DataFrame([health_row])
-    hh.to_csv(health_path, index=False)
-    pd.DataFrame([health_row]).to_csv(LOG_DIR / "health" / "latest_health.csv", index=False)
+        "n_target_positions": int(decision.get("n_target_positions", 0)),
+        "n_planned_orders":   int(decision.get("n_planned_orders", 0)),
+        "n_submitted_orders": int(decision.get("n_submitted_orders", 0)),
+        "account_value":      float(account_info.get("equity", 0.0)),
+        "submit_orders":      bool(decision.get("submit_orders", False)),
+    }])
+    _append_csv(LOG_DIR / "health" / "signal_history.csv", sig_row)
 
 
 # ════════════════════════════════════════════════════════════════════════
