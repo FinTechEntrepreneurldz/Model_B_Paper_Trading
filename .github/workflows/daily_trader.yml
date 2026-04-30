@@ -1,0 +1,72 @@
+name: Daily paper trader (Model B)
+
+on:
+  schedule:
+    # 14:00 UTC = 9:00 AM ET (during DST) / 10:00 AM ET (standard) — runs after market open
+    # The script decides whether today is a rebalance day based on history.
+    - cron: "0 14 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      force_rebalance:
+        description: "Force a rebalance regardless of schedule"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      dry_run:
+        description: "Dry run (no Alpaca submission)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write  # to commit logs back
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run paper trader
+        env:
+          ALPACA_API_KEY:    ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          SUBMIT_ORDERS:     "true"
+        run: |
+          ARGS=""
+          if [[ "${{ github.event.inputs.force_rebalance }}" == "true" ]]; then
+            ARGS="$ARGS --force-rebalance"
+          fi
+          if [[ "${{ github.event.inputs.dry_run }}" == "true" ]]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python paper_trader.py $ARGS
+
+      - name: Commit logs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logs/
+          if git diff --staged --quiet; then
+            echo "No log changes to commit."
+          else
+            git commit -m "logs: $(date -u +'%Y-%m-%d %H:%M:%S UTC') paper trade run"
+            git push
+          fi
