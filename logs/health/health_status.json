@@ -1,11 +1,13 @@
 {
-  "computed_at": "2026-05-01T01:17:31.444697+00:00",
+  "computed_at": "2026-05-01T14:47:33.815964+00:00",
   "lookback_days": 63,
-  "overall_status": "ok",
-  "alerts": [],
+  "overall_status": "hold",
+  "alerts": [
+    "hold"
+  ],
   "metrics": {},
   "action_counts": {
-    "rebalance": 1
+    "hold": 1
   },
   "action_entropy": null,
   "portfolio_sharpe_30d": null,
@@ -14,7 +16,7 @@
   "spy_return_30d": null,
   "n_decisions": 1,
   "n_unique_actions": 1,
-  "top_action": "rebalance",
+  "top_action": "hold",
   "top_action_pct": 100.0,
   "days_since_last_run": 0,
   "training_recommended": false

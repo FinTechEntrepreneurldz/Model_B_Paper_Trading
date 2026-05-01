@@ -2,3 +2,4 @@ market_date,variant,action,action_idx,last_action,submit_orders,account_status,a
 2026-04-30,MLP_alpha__130_30,rebalance,0,,True,AccountStatus.ACTIVE,1000000.0,114,107,107,artifacts/mlp.joblib,,2026-04-30T23:59:23.882648+00:00
 2026-05-01,MLP_alpha__130_30,rebalance,0,,True,AccountStatus.ACTIVE,1000000.0,114,107,107,artifacts/mlp.joblib,,2026-05-01T00:03:14.395723+00:00
 2026-05-01,MLP_alpha__130_30,rebalance,0,,True,AccountStatus.ACTIVE,1000000.0,114,107,107,artifacts/mlp.joblib,,2026-05-01T01:17:31.444697+00:00
+2026-05-01,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,998635.58,0,0,0,artifacts/mlp.joblib,,2026-05-01T14:47:33.815964+00:00

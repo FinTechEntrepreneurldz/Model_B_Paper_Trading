@@ -2,3 +2,4 @@ timestamp_utc,portfolio_value,action,submit_orders
 2026-04-30T23:59:23.882648+00:00,1000000.0,rebalance,True
 2026-05-01T00:03:14.395723+00:00,1000000.0,rebalance,True
 2026-05-01T01:17:31.444697+00:00,1000000.0,rebalance,True
+2026-05-01T14:47:33.815964+00:00,998635.58,hold,False
