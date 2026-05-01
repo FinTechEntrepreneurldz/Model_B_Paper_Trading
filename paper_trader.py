@@ -541,7 +541,14 @@ def build_order_plan(target_weights: pd.Series, current_positions: pd.DataFrame,
             "weight_diff":   round(float(dw), 4),
             "price":         round(float(px), 2),
         })
-    return pd.DataFrame(rows).sort_values("notional", ascending=False).reset_index(drop=True)
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return df
+    # Sort sells first (closes longs we no longer want, opens shorts → frees buying power),
+    # then buys, with biggest dollar amount first within each side.
+    df["_side_rank"] = df["side"].map({"sell": 0, "buy": 1}).fillna(2)
+    df = df.sort_values(["_side_rank", "notional"], ascending=[True, False]).drop(columns="_side_rank").reset_index(drop=True)
+    return df
 
 
 def submit_orders(order_plan: pd.DataFrame, client) -> pd.DataFrame:
@@ -550,10 +557,23 @@ def submit_orders(order_plan: pd.DataFrame, client) -> pd.DataFrame:
 
     submitted = []
     for _, row in order_plan.iterrows():
+        # Use whole-share qty for ALL orders.
+        # Alpaca rejects notional/fractional orders for opening short positions
+        # ("fractional orders cannot be sold short", error 42210000), so we
+        # quantize to integer shares for both sides.
+        qty = int(row["qty"])  # floor; loses pennies of precision but avoids the rejection
+        if qty < 1:
+            # Trade is smaller than one share at this price — skip it.
+            submitted.append({
+                "symbol": row["symbol"], "side": row["side"], "qty": 0,
+                "notional": row["notional"], "order_id": None,
+                "status": "SKIPPED: qty<1 share",
+            })
+            continue
         try:
             req = MarketOrderRequest(
                 symbol=row["symbol"],
-                notional=row["notional"],
+                qty=qty,
                 side=OrderSide.BUY if row["side"] == "buy" else OrderSide.SELL,
                 time_in_force=TimeInForce.DAY,
             )
@@ -561,16 +581,19 @@ def submit_orders(order_plan: pd.DataFrame, client) -> pd.DataFrame:
             submitted.append({
                 "symbol":   row["symbol"],
                 "side":     row["side"],
-                "notional": row["notional"],
+                "qty":      qty,
+                "notional": round(qty * float(row["price"]), 2),
                 "order_id": o.id,
                 "status":   str(o.status),
             })
-            print(f"    ✅ {row['side'].upper()} ${row['notional']:>8.2f} {row['symbol']}")
+            print(f"    ✅ {row['side'].upper():4} {qty:>5d} {row['symbol']:6} (~${qty * row['price']:>9,.0f})")
         except Exception as e:
-            print(f"    ❌ {row['symbol']} ({row['side']} ${row['notional']:.2f}): {e}")
+            err = str(e)[:200]
+            print(f"    ❌ {row['side'].upper():4} {qty:>5d} {row['symbol']:6}: {err}")
             submitted.append({
-                "symbol": row["symbol"], "side": row["side"], "notional": row["notional"],
-                "order_id": None, "status": f"ERROR: {e}",
+                "symbol": row["symbol"], "side": row["side"], "qty": qty,
+                "notional": round(qty * float(row["price"]), 2),
+                "order_id": None, "status": f"ERROR: {err}",
             })
     return pd.DataFrame(submitted)
 
