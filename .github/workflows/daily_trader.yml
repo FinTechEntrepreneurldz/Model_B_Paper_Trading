@@ -4,7 +4,7 @@ on:
   schedule:
     # 14:00 UTC = 9:00 AM ET (during DST) / 10:00 AM ET (standard) — runs after market open
     # The script decides whether today is a rebalance day based on history.
-    - cron: "0 14 * * 1-5"
+    - cron: '40 12 * * 1-5'   # Mon-Fri 12:40 UTC = 8:40 AM ET
   workflow_dispatch:
     inputs:
       force_rebalance:
