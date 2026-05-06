@@ -7,3 +7,4 @@ market_date,variant,action,action_idx,last_action,submit_orders,account_status,a
 2026-05-05,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,1018717.84,0,0,0,artifacts/mlp.joblib,,2026-05-05T01:03:33.133528+00:00
 2026-05-05,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,990877.81,0,0,0,artifacts/mlp.joblib,,2026-05-05T12:54:48.380065+00:00
 2026-05-05,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,995879.61,0,0,0,artifacts/mlp.joblib,,2026-05-05T14:37:22.790696+00:00
+2026-05-06,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,1027706.99,0,0,0,artifacts/mlp.joblib,,2026-05-06T02:17:17.088264+00:00
