@@ -1,2 +1,2 @@
 market_date,variant,action,action_idx,last_action,submit_orders,account_status,account_value,n_target_positions,n_orders_planned,n_orders_submitted,model_path,metadata_path,timestamp_utc
-2026-05-11,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,1006630.85,0,0,0,artifacts/mlp.joblib,,2026-05-11T23:44:42.244944+00:00
+2026-05-12,MLP_alpha__130_30,hold,0,,False,AccountStatus.ACTIVE,1004017.76,0,0,0,artifacts/mlp.joblib,,2026-05-12T11:12:05.716921+00:00
